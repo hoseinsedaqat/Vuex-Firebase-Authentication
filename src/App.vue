@@ -1,12 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <TopHeader />
+    <div id="nav"><Header /></div>
+    <router-view />
   </div>
 </template>
+
+<script>
+import TopHeader from "./components/Top-Header";
+import Header from "./components/Header";
+export default {
+  data() {
+    return {
+      showLink: true,
+    };
+  },
+  components: {
+    TopHeader,
+    Header,
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
